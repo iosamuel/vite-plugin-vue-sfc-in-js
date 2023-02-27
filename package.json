@@ -1,0 +1,28 @@
+{
+  "name": "vite-plugin-vue-sfc-in-js",
+  "version": "0.1.0",
+  "description": "Vue SFC in JS files",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iosamuel/vite-plugin-vue-sfc-in-js.git"
+  },
+  "keywords": [
+    "vite-plugin",
+    "vue",
+    "sfc",
+    "js"
+  ],
+  "author": "Samuel Burbano",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.9",
+    "@types/node": "^18.14.2",
+    "@vue/compiler-sfc": "^3.2.47",
+    "typescript": "^4.5.2"
+  }
+}
