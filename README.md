@@ -1,6 +1,12 @@
-# Vue SFC in JS
+# Vue SFC in JS 🔰
 
-The objective of this plugin is to allow developers to write SFCs inside JS files, similar to JSX somehow.
+```bash
+npm install vite-plugin-vue-sfc-in-js
+```
+
+---
+
+The objective of this plugin is to allow developers to write SFCs inside JS files, similar to JSX... in some way.
 
 For example:
 
@@ -59,7 +65,7 @@ export const CartIcon = (
 );
 ```
 
-As you can see, the main advantage here is that we can export multiple components from the same .js file and use it like a normal function inside other Vue components.
+As you can see, the main advantage here is that we can export multiple components from the same `.js` file and use it like a normal component inside other Vue components.
 
 ```vue
 <script setup>
@@ -81,6 +87,8 @@ export default defineConfig({
 
 And start writing SFC in your JS files, by using a similar syntax as JSX, just make sure to wrap your SFCs in a `<vue></vue>` Tag.
 
+You can use either a `.js` or a `.vjs` file if you feel it more convenient.
+
 ```js
 export const CartIcon = (
   <vue>
@@ -90,10 +98,24 @@ export const CartIcon = (
       <p>Can use Template</p>
     </template>
 
-    <style>/* TODO */</style>
+    <style>/* not implemented */</style>
   </vue>
 );
 ```
+
+## 🤔 Why?
+
+For now, this is just a very naive and simplistic POC to see if actually more Devs would like and use this kind of solution.
+
+So if you actually like it, please remember to <a href="https://github.com/iosamuel/vite-plugin-vue-sfc-in-js">⭐️ the repo</a> and <a href="https://www.npmjs.com/package/vite-plugin-vue-sfc-in-js">📦 `npm install`</a> the heck out of it.
+
+### Problem to solve
+
+In Vue world, for example if you want to have multiple Icons and use them, you would need to create an `Icons` folder and create multiple `.vue` files, one per icon.
+
+### Solution
+
+With VJS you only need an `Icons.[v]js` file and export all the components you want using JS + SFC syntax!
 
 ## Author
 

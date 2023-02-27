@@ -9,7 +9,10 @@ import { randomUUID } from "crypto";
 function vueJsPlugin() {
   return {
     name: "vue-js-plugin",
-    async transform(code: string, id: string) {
+    async transform(
+      code: string,
+      id: string
+    ): Promise<{ code: string; map: null }> {
       if (id.endsWith(".js") || id.endsWith(".vjs")) {
         // Look for the <vue>...</vue> tags
         const vueComponents = code.match(/<vue>([\s\S]*?)<\/vue>/gm);
